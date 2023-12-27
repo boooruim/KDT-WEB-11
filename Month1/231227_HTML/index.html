@@ -67,7 +67,7 @@
 
 
         <input type="text" placeholder="이름"/> <br>
-        <input type="text" value="이름"/> <br>
+        <input type="text" value="이름" readonly/> <br> <!--readonly로 인해 입력이 안됨-->
         <input type="password" placeholder="비밀번호"> <br>
 
         <input type="checkbox" name = "food" value="피자">피자 <br><!--value는 서버로 갈 애임, 옆에 적은 피자가 client에게 보여주는 내용-->
@@ -76,7 +76,8 @@
         <!--라디오는 name의 역할이 좀 중요함. 같은 name 중에서만 하나가 선택됨.(나머지는 해제된다는 얘기)-->
         <input type="radio" name ="hobby" value ="camping">캠핑 <br>
         <input type="radio" name ="hobby" value ="climbing">등산<br>
-        <input type="radio" name ="hobby" value ="swimming">수영<br>
+        <input type="radio" name ="hobby" value ="swimming" disabled>수영<br>
+        <input type="radio" name ="hobby" value ="running">달리기<br>
 
         <input type="date">
         <input type="time">
