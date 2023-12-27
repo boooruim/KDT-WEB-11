@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDT 11기</title>
+</head>
+<body>
+    <!--div 태그는 block 태그로써 한줄의 영역을 차지-->
+    <div>Hello World!!</div>
+    <div>안녕하세요</div>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    
+    <p>안녕하세요<br> 이태근입니다.</p>
+    
+    <hr>
+
+    <!--ul: 순서없는 목록-->
+    <ul type="square"> <!-- type 마커 모양: disc, circle, square, none -->
+        <li>사과</li>
+        <li>바나나</li>
+        <li>파인애플</li>
+    </ul>
+
+    <!--ol: 순서없는 목록-->
+    <ol type ='a' start = "3" reversed> 
+
+        <!-- type 마커 모양: 1, A, a, I, i -->
+        <!-- start: 시작 번호 -->
+
+        <li>사과</li>
+        <li>바나나</li>
+        <li>파인애플</li>
+    </ol>
+
+    <ul >
+        <li>
+            <ol>
+                <li><b>일</b></li>
+                <li><strong>이</strong></li>
+                <li><i>삼</i></li>
+                
+            </ol>
+        </li>
+       <li>
+            <ol>
+                <li><em>1</em></li>
+                <li><del>2</del></li>
+                <li><u>3</u></li>
+            </ol>
+       </li>
+        
+    </ul>
+    <img src = "https://ssl.pstatic.net/melona/libs/1474/1474337/5e23a9d4a3d1fe155e8a_20231226163345810.jpg">
+    
+    <!--form 태그: input 태그를 담는 역할.
+        서버로 input 데이터(value)를 전송시키는 역할-->
+    <form>
+        <input type="button" value="버튼" /> <!--submit은 아님-->
+        <button>전송</button> <!--얘는 submit임. 누르면 백엔드로 전송하려고 함-->
+        <button type="button">버튼</button> <!--submit 아님.--> <br>
+
+
+        <input type="text" placeholder="이름"/> <br>
+        <input type="text" value="이름"/> <br>
+        <input type="password" placeholder="비밀번호"> <br>
+
+        <input type="checkbox" name = "food" value="피자">피자 <br><!--value는 서버로 갈 애임, 옆에 적은 피자가 client에게 보여주는 내용-->
+        <input type="checkbox" name = "food" value="치킨" checked> 치킨 <br>
+
+        <!--라디오는 name의 역할이 좀 중요함. 같은 name 중에서만 하나가 선택됨.(나머지는 해제된다는 얘기)-->
+        <input type="radio" name ="hobby" value ="camping">캠핑 <br>
+        <input type="radio" name ="hobby" value ="climbing">등산<br>
+        <input type="radio" name ="hobby" value ="swimming">수영<br>
+
+        <input type="date">
+        <input type="time">
+        <input type="datetime-local">
+
+        <select>
+            <optgroup label ="ASIA">
+                <option value ="kr">대한민국</option>
+                <option value ="jp">일본</option>
+                <option value ="ch">중국</option>
+            </optgroup>
+            <optgroup label ="AMERICA">
+                <option value ="us">미국</option>
+                <option value ="kn">캐나다</option>
+            </optgroup>
+
+        </select>
+
+    </form>
+
+
+
+</body>
+</html>
