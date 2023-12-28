@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>가격표</h1>
+
+    <table border="1" cellspacing ="0" cellpadding="1"> <!--cellspacing은 선과의 여백, cellpadding은 콘텐츠와의 여백을 담당-->
+        <thead>
+            <tr>
+                <th>메뉴</th>
+                <th>가격</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+            
+        <tbody>
+            <tr>
+                <td>국물 떡볶이</td>
+                <td>5,000원</td>
+                <td>맵기(보통, 매운, 아주 매운)</td>
+            </tr>
+            <tr>
+                <td>김밥</td>
+                <td>3,000원</td>
+                <td>두 줄 이상 구매시 한 줄 무료 </td>
+            </tr>
+            <tr>
+                <td>순대</td>
+                <td>4,000원</td>
+                <td>간, 허파 제공가능</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>New 가격표</h2>
+    <table border="1" cellspacing="0" cellpadding="1">
+        <thead>
+            <tr>
+                <th>메뉴</th>
+                <th>가격</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>국물떡볶이</td>
+                <td>6,000원</td>
+                <td>맵기(아주 매운)</td>
+            </tr>
+
+            <tr>
+                <td>참치 김밥</td>
+                <td rowspan="2">4,000원</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>치즈김밥</td>
+                <!--
+                    <td>4,000원</td> //rowspan 때문에 지워야 함.
+                -->
+                <td>국물 제공 불가능</td>
+            </tr>
+
+            <tr>
+                <td colspan="3"> 순대 (품절)</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
