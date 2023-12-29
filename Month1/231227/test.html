@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인용</title>
+</head>
+<body>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form action="/submit" method="post">
+        <!-- 여러 입력 요소들이 들어갈 곳 -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <input type="button" value="제출" />
+    <input type="submit" > <!--defualt value:'제출'-->
+    <button>제출</button> 
+
+    <br>
+    <br>
+
+    <button type="button">버튼</button> <!--submit 아님.--> <br>
+    <br>
+    <br>
+    <br>
+
+    <input type="text" placeholder="이름"/> <br>
+    <input type="text" value="이름" readonly/> <br> <!--readonly로 인해 입력이 안됨-->
+    <input type="password" placeholder="비밀번호"> <br>
+
+    <br>
+    <br>
+    <br>
+
+    <input type="checkbox" name = "food" value="피자">피자 <br><!--value는 서버로 갈 애임, 옆에 적은 피자가 client에게 보여주는 내용-->
+    <input type="checkbox" name = "food" value="치킨" checked> 치킨 <br>
+    <input type="checkbox" name = "food" value="햄버거" > 햄버거 <br>
+
+    <br>
+    <br>
+    <br>
+
+    <!--라디오는 name의 역할이 좀 중요함. 같은 name 중에서만 하나가 선택됨.(나머지는 해제된다는 얘기)-->
+    <input type="radio" name ="hobby" value ="camping">캠핑 <br>
+    <input type="radio" name ="hobby" value ="climbing">등산<br>
+    <input type="radio" name ="hobby" value ="swimming" disabled>수영<br>
+    <input type="radio" name ="hobby" value ="running">달리기<br>
+
+    <br>
+    <br>
+    <br>
+
+    <input type="date">
+    <input type="time">
+    <input type="datetime-local">
+
+    <br>
+    <br>
+    <br>
+
+    <select>
+        <optgroup label ="ASIA">
+            <option value ="kr">대한민국</option>
+            <option value ="jp">일본</option>
+            <option value ="ch">중국</option>
+        </optgroup>
+        <optgroup label ="AMERICA">
+            <option value ="us">미국</option>
+            <option value ="kn">캐나다</option>
+        </optgroup>
+
+    </select>
+
+
+
+
+</body>
+</html>
