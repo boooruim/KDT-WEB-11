@@ -3,7 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>복합 선택자, 가상 클래스</title>
+
+    <style>
+        .fruits span:first-child{ /*딸기가 형제들 중 첫번 째니 적용*/
+            color:red;
+        }
+        .fruits div:first-child{ /*오렌지는 형제들 중 세번 째니 미적용*/
+            color:red;
+        }
+        .fruits h3:last-child{ /*사과는 형제들 중 마지막이니 적용*/
+            color:red;
+        }
+
+        .fruits *:nth-child(3){ /*오렌지는 형제들 중 세번 째(index 기준 아님)이니 적용*/
+            color:orange;
+        }
+        .fruits *:nth-child(2n){ /*n:zero-based 짝수번 째만 적용*/
+            color:blue;
+        }
+        .fruits *:nth-child(n+1){ /*홀수번 째만 적용*/
+            color:green;
+        }
+        .fruits *:not(span) /*span이 아닌 것만 적용*/
+        {
+            color: pink;
+        }
+    </style>
 </head>
 <body>
     <!--모든 태그의 attribute에는 class가 다 가능-->
@@ -11,5 +37,15 @@
     ex: <p class="one two three">
     -->
     <!--우선순위: 전체 선택자 < 태그 선택자 < id,class 선택자-->
+
+
+    <div class="fruits">
+        <span>딸기</span> 
+        <span>수박</span>
+        <div>오렌지</div>
+        <p>망고</p>
+        <h3>사과</h3>
+    </div>
+
 </body>
 </html>
