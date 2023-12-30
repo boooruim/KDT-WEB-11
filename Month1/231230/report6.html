@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        [disabled]
+        {
+            background-color: red;
+        }
+        [placeholder="이름"]
+        {
+            background-color: orange;
+        }
+
+        [type]:not([placeholder])
+        {
+            background-color: blue;
+        }
+        /*밑에 것과 동일*/
+        input:not([placeholder])
+        {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="이름"><br>
+    <input type = "password" value="pw"><br>
+    <input type="text" value="010-0000-0000"><br>
+    <input type="text" placeholder="핸드폰"><br>
+    <input type="text" placeholder="주민번호" disabled>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+@font-face { /*눈누 폰트*/
+    font-family: 'DAEAM_LEE_TAE_JOON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/DAEAM_LEE_TAE_JOON.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div{
+    display:block;
+}
+
+.content1{
+
+    font-family: 'Noto Sans KR', sans-serif;
+}
+    
+.content2{
+    font-family: 'DAEAM_LEE_TAE_JOON';
+}
