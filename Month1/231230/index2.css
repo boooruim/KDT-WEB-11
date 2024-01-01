@@ -1,6 +1,17 @@
-.text{
-    width:300px;
-    text-align:center;
+/* 텍스트 스타일링 */
+body {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    color: red;
+  }
+  
+  /* 텍스트 레이아웃 */
+  h1{
+    text-align: center;
+  }
+  
+  p {
     text-decoration: underline;
-
-}
+  }
