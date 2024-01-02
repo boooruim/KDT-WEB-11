@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p:hover{
+            background-color: skyblue;
+        }
+
+        a:active {
+            background-color: blue;
+        }
+
+        input:focus{
+            background-color: orange;
+        }
+
+        .parent *:nth-child(2n+1)
+        {
+            
+            color:red;
+            cursor: pointer; /*손가락 모양으로 바뀜*/
+        }
+        
+        *:not([input]) {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        <p>hover</p>
+        <input type ="text">
+        <a href="http://google.co.kr">Google</a>
+    </div>
+    
+</body>
+</html>
