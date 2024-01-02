@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 2</title>
+    <style>
+        body{
+            text-align: center;
+            margin: 0;
+        }
+        .background{
+            background-color: antiquewhite;
+        }
+        span.content1{
+            display: inline-block;
+            border:3px dotted red;
+        }
+        .essential .content1::after {
+            display: block;
+            visibility: hidden;
+            content: "필수 항목입니다";
+            color:red;
+            font-weight: bold;
+        }
+
+        .essential:hover .content1::after{
+            visibility: visible;
+        }
+
+        span.content2{
+            display: inline-block;
+            border:3px dotted blue;
+            border-radius: 10px;
+        }
+        span.content3{
+            display: inline-block;
+            border:3px dotted blue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="background">
+        <h2>설문조사</h2>
+        <div class="essential">
+            <span class="content1">
+                <span>이름</span>
+                <input type="text"><br>
+    
+                <span>이메일</span>
+                <input type="email" id="email" placeholder="love@example.com">
+            </span>
+        </div>
+        <hr>
+        <span class="content2">
+            <h3>나이</h3>
+
+            <input type="radio" name="age" checked>10대
+            <input type="radio" name="age">20대
+            <input type="radio" name="age">30대
+            <input type="radio" name="age">40대
+            <input type="radio" name="age">50대
+            <input type="radio" name="age">60대 이상<br>
+        </span>
+        <hr>
+        <span class="content2">
+            <h3>원하는 강의(복수 응답 가능합니다.)</h3>
+            <input type="checkbox" checked>html
+            <input type="checkbox">javascript
+            <input type="checkbox">css<br>
+        </span>
+        <hr>
+        <div>
+            <textarea rows="8" cols="80" placeholder="하고 싶은 말을 써주세요:)" ></textarea>
+            <input type="submit">
+        </div>
+    </div>
+</body>
+
+</html>
