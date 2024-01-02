@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position 실습</title>
+
+    <style>
+        .parent{
+            background-color: blue;
+            width:300px;
+            height:300px;
+            position:relative;
+        }
+        .box1{
+            background-color: yellowgreen;
+            width:100px;
+            height:80px;
+        }
+        .box2{
+            background-color: red;
+            width:150px;
+            height:100px;
+            /*position은 default로 static이기 때문에 relative로 해줘야 위치가 바뀜.*/
+            top: 60px;
+            left: 30px;
+            position:relative;
+            /* position:absolute; 얘는 부모기준으로(부모는 relative여야 함), 절대적으로 위치가 바뀜. 다른 요소들은 얘를 고려 안함.*/
+            /* position:fixed; 스크롤을 내려도 고정*/
+        }
+        .box3{
+            background-color: orange;
+            width:100px;
+            height:150px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

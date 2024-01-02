@@ -1,0 +1,16 @@
+body
+{
+    margin:0px;
+    background-color: blanchedalmond;
+    height:100vh;
+}
+
+div{
+    background-color: blue;
+    width:100px;
+    height:100px;
+    margin:auto;
+    text-align: center;
+    margin-top: calc(50vh - (100vw/20));
+    line-height: 100px;
+}   

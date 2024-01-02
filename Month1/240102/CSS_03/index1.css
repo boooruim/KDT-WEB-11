@@ -1,0 +1,8 @@
+.bgColor{
+    background-color: aquamarine;
+
+    width:500px;
+    height: 500px;
+    max-width: 100px;
+    max-height:100px;
+}
