@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        position: relative;
+      }
+      .circle {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .eye1 {
+        background-color: white;
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+      }
+
+      .eye2 {
+        background-color: black;
+        width: 20px;
+        height: 20px;
+        top: 25px;
+        left: 22px;
+        z-index: 2;
+      }
+      .item1 {
+        background-color: #2196f3;
+      }
+      .item2 {
+        background-color: #1976d2;
+        top: 40px;
+        left: 70px;
+      }
+      .item3 {
+        background-color: #0d47a1;
+        top: 80px;
+        left: 100px;
+      }
+      .item4 {
+        background-color: #b2ccff;
+        top: 120px;
+        left: 150px;
+      }
+
+      .item5 {
+        background-color: #008299;
+        top: 120px;
+        left: 200px;
+        z-index: 2;
+      }
+      .grass {
+        top: 100px;
+        left: 30px;
+        position: absolute;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle eye1"></div>
+      <div class="circle eye2"></div>
+      <div class="circle item1"></div>
+      <div class="circle item2"></div>
+      <div class="circle item3"></div>
+      <div class="circle item4"></div>
+      <div class="circle item5"></div>
+      <img src="./grass.png" class="grass" />
+    </div>
+  </body>
+</html>

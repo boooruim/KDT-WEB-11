@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex 실습 1</title>
+    <style>
+      .main {
+        background-color: blue;
+        width: 100%;
+        height: 500px;
+        display: flex;
+
+        flex-wrap: wrap; /*창 줄어들 시에 줄바꿈*/
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        justify-content: space-between; /*축의 정렬을 설정.flex 쓴다하면 거의 따라옴*/
+        align-items: stretch; /*위아래 축의 정렬을 설정(단, 한 줄일 때)
+        
+        /*align-content:flex-start;위아래 축의 정렬을 설정(단, 여러줄 일때)*/
+        /*align-items과 align-content는 보통 둘 중에 하나만 사용*/
+        /*align-content는 flex-wrap:wrap까지 사용*/
+      }
+
+      .box1 {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 100px;
+        background-color: orange;
+      }
+      .box3 {
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box2"></div>
+      <div class="box1"></div>
+    </div>
+  </body>
+</html>
