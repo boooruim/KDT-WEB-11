@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>트랜지션</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+      }
+
+      .box1 {
+        background-color: red;
+      }
+      .box2 {
+        background-color: orange;
+      }
+      .box3 {
+        background-color: yellow;
+      }
+      .box4 {
+        background-color: green;
+      }
+      .box1:hover {
+        width: 400px;
+        background-color: blue;
+        opacity: 0.5;
+        transition-duration: 1s;
+        transition-timing-function: ease;
+        transition-delay: 1s;
+      }
+      .box2:hover {
+        width: 400px;
+        /* background-color: blue; 뭔지 모름
+        opacity: 0.5;
+        transition-duration: 1s;
+        transition-timing-function: ease;
+        transition-delay: 1s; */
+      }
+      .box3:hover {
+        transform: scale(3) translate(100px, 100px);
+        transition: all 3s ease-in-out;
+      }
+      .box4:hover {
+        transform: translate(-5px, -15px);
+        box-shadow: 4px 4px 10px #000000;
+        transition: all 0.2s ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS transition</h1>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+  </body>
+</html>
