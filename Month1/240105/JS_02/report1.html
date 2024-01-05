@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1. 함수 선언문
+      function multifly1(a, b) {
+        let mul = a * b;
+        return mul;
+      }
+      console.log(multifly1(3, 7));
+      console.log(multifly1(2, 2));
+
+      //2. 함수 표현식
+      let multifly2 = function (a, b) {
+        let mul = a * b;
+        return mul;
+      };
+      console.log(multifly2(3, 7));
+      console.log(multifly2(2, 2));
+
+      //2-1 화살표 함수
+      let multifly3 = (a, b) => {
+        let mul = a * b;
+        return mul;
+      };
+      console.log(multifly3(3, 7));
+      console.log(multifly3(2, 2));
+    </script>
+  </body>
+</html>

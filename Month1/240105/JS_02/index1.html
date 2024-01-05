@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+      impossible(); //에러. 함수 표현식으로 정의했기 때문에, 먼저 호출 못함
+      let impossible = function () {
+        const num1 = 11; //지역 변수
+        console.log("지역 변수:", num1);
+      };
+
+      localValue(); //함수 선언문으로 정의했기 때문에, 호이스팅으로 인해 호출 가능.
+      //호이스팅: function 코드를 우선적으로 메모리에 올림.
+
+      const num1 = 10; //전역 변수
+      function localValue() {
+        const num1 = 11; //지역 변수
+        console.log("지역 변수:", num1);
+      }
+      console.log("전역 변수", num1);
+      localValue();
+    </script>
+  </body>
+</html>
