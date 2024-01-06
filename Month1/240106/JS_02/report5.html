@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let age = Number(prompt('나이 입력 해주세요.'));
+            let gender = prompt('성별을 입력하세요');
+
+            if (age >= 20) console.log(`${gender} 성인`);
+            else if (age >= 17) console.log(`${gender} 고등학생`);
+            else if (age >= 14) console.log(`${gender} 중학생`);
+            else if (age >= 8) console.log(`${gender} 초등학생`);
+            else console.log(`${gender} 유아`);
+        </script>
+    </body>
+</html>
