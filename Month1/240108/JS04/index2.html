@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 기초</title>
+</head>
+
+<body>
+    <div id="kdt11id1" class="kdt11class" name="kdt11name1">
+        <p>id-1</p>
+    </div>
+    <div id="kdt11id2" class="kdt11class" name="kdt11name2">
+        <p>id-2</p>
+    </div>
+    <div class="kdt11class"></div>
+    <div class="kdt11calss"></div>
+    <div class="kdt11class"></div>
+    <div class="kdt11class"></div>
+    <div class="kdt11class"></div>
+    <div class="kdt11class"></div>
+
+    <script>
+        //요소 접근
+        //첫 번째 방법  
+        const id = document.getElementById("kdt11id1");
+        const classes = document.getElementsByClassName("kdt11class");
+        const names = document.getElementsByName("kdt11name1");
+        const tags = document.getElementsByTagName("body");
+
+        console.log(id);
+        console.log(classes);
+        console.log(names);
+        console.log(tags);
+
+        //두 번째 방법
+        const queryId = document.querySelector('#kdt11id2');
+        const queryClass = document.querySelector('.kdt11class');
+        const queryClases = document.querySelectorAll('.kdt11class');
+        console.log(queryId);
+        console.log(queryClass);
+        console.log(queryClases);
+
+
+    </script>
+</body>
+
+</html>
