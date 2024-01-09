@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title {
+            color: blue;
+
+        }
+
+        .title-big {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='text' class="'title-big"></div>
+    <a id="link">링크</a>
+    <img id="image">
+    <input type="text" id="input">
+
+    <script>
+        const text = document.getElementById("text");
+        console.log(text);
+        text.textContent = 'hi'; // 공백문자 그대로 반환, IE9이전 버전에선 사용 불가
+        text.innerText = '안녕하세요'; //남는 공백 문자 제거, table, tbody, tr 등 테이블 요소 수정 불가
+        text.innerHTML = "여기는 <b>첫 번째</b> 태그입니다."; // 입력된 문자열을 HTML형식으로.
+
+        ////////////////////////////////
+
+        text.classList.add('title');
+        text.classList.remove('title');
+        text.classList.toggle('title-big');
+        console.log(text.classList.contains('title-big'))
+
+        ////////////////////////////////
+
+        const link = document.getElementById('link');
+        console.log(link);
+        link.setAttribute('href', 'https://www.naver.com');
+
+        const img = document.getElementById('image');
+        img.setAttribute('src', 'background.jpg');
+        img.setAttribute('width', '200');
+
+        const input = document.getElementById('input');
+        input.setAttribute('placeholder', '이름을 입력해주세요.');
+
+    </script>
+
+
+</body>
+
+</html>

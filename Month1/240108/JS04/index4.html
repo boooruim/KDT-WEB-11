@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent">
+        <div class="child">1</div>
+        <div class="child" id="target">2</div>
+        <div class="child">3</div>
+    </div>
+
+    <script>
+        const target = document.getElementById("target");
+        console.log(target);
+
+        const childrens = target.parentNode.children; //타겟기준 모든 형제요소들 접근
+        console.log(childrens);
+
+        const firstChildren = target.parentNode.children[0]; //첫 번째 요소 접근
+        console.log(firstChildren)
+
+        const parent = target.parentNode;
+        console.log(parent);
+
+        const prevSibling = target.previousElementSibling; // 형제 1
+        console.log(prevSibling);
+
+        const nextSibling = target.nextElementSibling; //형제 3
+        console.log(nextSibling);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>방명록입니다.</p>
+    <div>
+        작성자<input type="text" id="elemAuthor">
+    </div>
+    <div>
+        내용<input type="text" id="elemContent" style="width:500px;">
+    </div>
+    <button onclick="Post();">작성</button>
+
+    <table border="1" cellspacing="0" cellpadding="1" style="width:300px;">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>작성자</th>
+                <th>내용</th>
+                <th>작성일</th>
+            </tr>
+        </thead>
+
+        <tbody id="rows">
+    </table>
+    <script>
+        let number = 1;
+        const elemAuthor = document.getElementById("elemAuthor");
+        const elemContent = document.getElementById("elemContent");
+        const date = new Date();
+
+        function Post() {
+            const author = elemAuthor.value;
+            const content = elemContent.value;
+
+            const td1 = document.createElement('td');
+            const td2 = document.createElement('td');
+            const td3 = document.createElement('td');
+            const td4 = document.createElement('td');
+            td1.textContent = number++;
+            td2.textContent = author;
+            td3.textContent = content;
+            td4.textContent = `${date.getFullYear()} - ${date.getMonth() + 1} - ${date.getDay()}  ${date.getHours()} : ${date.getMinutes()}`
+            console.log(td1);
+
+            const tr = document.createElement('tr');
+            tr.append(td1);
+            tr.append(td2);
+            tr.append(td3);
+            tr.append(td4);
+            console.log(tr);
+
+            const rows = document.getElementById("rows");
+            rows.append(tr);
+        }
+    </script>
+</body>
+
+</html>

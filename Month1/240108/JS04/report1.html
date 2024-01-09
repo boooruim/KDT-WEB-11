@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        값1:
+        <input type="text" id="elemValue1">
+    </div>
+    <div>
+        값2:
+        <input type="text" id="elemValue2">
+    </div>
+    <div>
+        연산자:
+        <input type="text" id="elemOperator">
+    </div>
+    <div>
+        결과:
+        <input type="text" id="elemResult">
+    </div>
+    <button onclick="Calc();">계산하기</button>
+    <button onclick="Init();">초기화</button>
+
+
+    <script>
+        const elemValue1 = document.getElementById('elemValue1');
+        const elemValue2 = document.getElementById('elemValue2');
+        const elemOperator = document.getElementById('elemOperator');
+        const elemResult = document.getElementById('elemResult');
+
+        function Calc() {
+            const value1 = Number(elemValue1.value);
+            const value2 = Number(elemValue2.value);
+            const operator = elemOperator.value;
+            let result = 0;
+            if (elemOperator.value == '+') {
+                result = value1 + value2;
+
+            } else if (elemOperator.value == '-') {
+                result = value1 - value2;
+            } else if (elemOperator.value == '/') {
+                result = value1 / value2;
+            } else if (elemOperator.value == '*') {
+                result = value1 * value2;
+            } else {
+                alert("연산자가 잘못되었습니다!");
+            }
+            elemResult.value = result;
+        }
+
+        function Init() {
+            elemValue1.value = null;
+            elemValue2.value = null;
+            elemOperator.value = null;
+            elemResult.value = null;
+        }
+    </script>
+</body>
+
+</html>

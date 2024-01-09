@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .append-p {
+            color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div>1</div>
+        <div id="target">2</div>
+        <div>3</div>
+    </div>
+    <script>
+        const root = document.getElementById('root');
+        const p = document.createElement('p');
+        p.textContent = "안녕하세요";
+        p.classList.add('append-p');
+        //<p class='append-p'>안녕하세요</p>
+        p.style.fontWeight = 'bold';
+
+        //<p class='append-p' style = 'font-weight:bold'>안녕하세요</p>
+
+        const target = document.getElementById("target");
+        root.append(p);
+        root.prepend(p);
+
+        target.before(p);
+        target.after(p);
+
+        //target.remove();
+        root.removeChild(p);
+
+
+    </script>
+</body>
+
+</html>
