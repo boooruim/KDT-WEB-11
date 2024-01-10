@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .img {
+            border-radius: 20%;
+            border-color: orange;
+            border-style: solid;
+            background-size: contain;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="img"></div>
+        <div>
+            <button type="button" onclick="apple()">사과</button>
+            <button type="button" onclick="banana()">바나나</button>
+            <button type="button" onclick="grape()">포도</button>
+            <button type="button" onclick="peach()">복숭아</button>
+        </div>
+    </div>
+
+    <script>
+        function apple() {
+            $('.img').css('background-image', "url('https://www.collinsdictionary.com/images/full/apple_158989157.jpg')");
+        }
+        function banana() {
+            $('.img').css('background-image', "url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg')");
+        }
+        function grape() {
+            $('.img').css('background-image', "url('https://www.collinsdictionary.com/images/full/grape_229112122.jpg')")
+        }
+        function peach() {
+            $('.img').css('background-image', "url('https://familytreefarms.com/wp-content/uploads/2021/03/PeachWhite.jpg')")
+        }
+    </script>
+
+
+</body>
+
+</html>

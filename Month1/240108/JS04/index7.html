@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <details>
+        <summary>QnA</summary>
+        <div>사용자가 클릭 후 볼 수 있는 내용</div>
+    </details>
+
+    <button type="button" id="btn">클릭</button> <!--submit용도의 button이 아니라는 것을 명시-->
+    <form>
+        <button id="default">버튼</button> <!--submit용도지만 js에서 preventDefault로 인해 submit을 막을 거임-->
+        <input type="text" id="input">
+    </form>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const def = document.getElementById('default');
+
+        btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            console.log(event);
+            console.log(event.target);
+        })
+
+
+        btn.addEventListener('mouseover', function () {
+            console.log('mouseover');
+        })
+        btn.addEventListener('mouseout', function () {
+            console.log('mouseout');
+        })
+        input.addEventListener('focus', function () {
+            console.log('focus');
+        })
+        input.addEventListener('blur', function () {
+            console.log('blur');
+        })
+        input.addEventListener('keydown', function () {
+            console.log('keydown');
+        })
+        input.addEventListener('keyup', function () {
+            console.log('keyup');
+        })
+
+        def.addEventListener('click', function (e) {
+            e.preventDefault(); //form 전송을 막는 메소드
+            console.log('first');
+        })
+
+        //this
+        def.addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log(this);
+            this.textContent = "클릭함";
+        })
+
+    </script>
+</body>
+
+</html>
