@@ -1,0 +1,58 @@
+.header {
+    position: relative;
+    background-color: rgb(116, 213, 213);
+    height: 120px;
+}
+
+.igloo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+    top: 30px;
+}
+
+.underHeader {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.menus {
+    position: absolute;
+    bottom: 50px;
+}
+
+.menu {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+/*300이상 이거나 500이하 일때만 아래 코드 해당*/
+@media screen and (max-width:768px) {
+
+    .menus {
+        display: flex;
+        position: static;
+        flex-direction: column;
+    }
+
+    .underHeader {
+        background-color: rgb(188, 237, 237);
+        height: 200px;
+        position: static;
+    }
+
+    .menu {
+        font-weight: normal;
+        margin: 20px 20px 0px 0px;
+    }
+
+    .igloo {
+        left: 50%;
+        transform: translateX(-30px);
+    }
+
+}

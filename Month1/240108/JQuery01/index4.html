@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Document</title>
+    <style>
+        .hover {
+            font-size: 50px;
+            background-color: cyan;
+            transition: all 0.2s;
+        }
+
+        body {
+            padding-bottom: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>
+        jQuery Event
+    </h4>
+
+    <p class="hello">
+        안녕하세요
+    </p>
+    <ul>
+        <li class="nums">1</li>
+        <li class="nums">2</li>
+        <li class="nums">3</li>
+        <li class="nums">4</li>
+    </ul>
+
+    <div class="div-hover">hover변화</div>
+
+    <input class="input-key">
+
+    <script>
+
+        //js
+        console.log(document);
+
+        //jquery
+        console.log($(document));
+        $(document).ready(function () {
+            console.log('ready() - 문서의 DOM 트리가 완성');
+        })
+
+        $(function () {
+
+            console.log('하이');
+        })
+
+        // click
+        $('.hello').click(function () {
+            $('.hello').css('color', 'blue');
+        });
+
+        //
+        $('.nums').click(function () {
+            //$('.nums').css('color','blues'); //이러면 모든 요소가 다 바뀜
+            $(this).css('color', 'red'); //클릭한 자기 자신만
+        })
+
+        $('.nums').on('click', function () { // 위와 같음
+            $(this).css('color', 'red');
+        })
+
+
+        //mouseover()
+        $('.number').mouseover(function () {
+            $(this).css('background-color', 'green');
+        })
+
+        //hover
+        $('.div-hover').hover(function () {
+            $(this).addClass('hover');
+        },
+            function () {
+                $(this).removeClass('hover');
+            }
+        )
+
+        $('.div-hover').hover(function () {
+            $(this).toggleClass('hover');
+        })
+
+        //scroll
+        $(window).scroll(function () {
+            console.log('scroll');
+        })
+
+
+        //keydown()
+        {
+            $('.input-key').keydown(function (e) {
+                //console.log(event);
+
+                if (e.code === 'ArrowUp') {
+                    console.log('up');
+                }
+                else if (e.code === 'ArrowDown') {
+                    console.log('down');
+                }
+                else if (e.code === 'ArrowRight') {
+                    console.log('right');
+
+                }
+                else if (e.code === 'ArrowLeft') {
+                    console.log('left');
+
+                }
+
+            })
+        }
+    </script>
+
+</body>
+
+</html>

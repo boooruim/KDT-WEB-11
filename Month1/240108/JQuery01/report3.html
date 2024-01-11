@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+        integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            left: 300px;
+            top: 100px;
+        }
+
+        th:first-child,
+        td:first-child {
+            color: red;
+        }
+
+        th:last-child,
+        td:last-child {
+            color: blue;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>날짜: <input type="text" class="dayText"></div>
+    <div>내용: <input type="text" class="contentText"></div>
+    <button type="button">작성</button>
+
+    <div class="main">
+        <h3>2월 달력</h3>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                </tr>
+            </thead>
+            <tbody class="weeks">
+                <!-- 동적으로 만드는 요소
+                    <tr class="week">
+                    <td class="day">
+                        <div class="dayValue">1</div>
+                        <div id = '1' class="contentValue" >운동하기</div>
+                    </td>
+                </tr>
+                -->
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src='report3.js'></script>
+
+</body>
+
+</html>
