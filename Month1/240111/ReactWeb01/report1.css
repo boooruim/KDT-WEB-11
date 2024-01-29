@@ -30,9 +30,7 @@
     font-weight: bold;
 }
 
-/*300이상 이거나 500이하 일때만 아래 코드 해당*/
 @media screen and (max-width:768px) {
-
     .menus {
         display: flex;
         position: static;
@@ -54,5 +52,4 @@
         left: 50%;
         transform: translateX(-30px);
     }
-
 }
