@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function red(name){
+            return new Promise( function (resolve){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'red';
+                    resolve();
+                },1000);
+            });
+        }
+
+        function orange(name){
+            return new Promise( function (resolve){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'orange';
+                    resolve();
+                },1000);
+            });
+        }
+
+        function yellow(name){
+            return new Promise( function (resolve){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'yellow';
+                    resolve();
+                },1000);
+            });
+        }
+        
+        function green(name){
+            return new Promise( function (resolve){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'green';
+                    resolve();
+                },1000);
+            });
+        }
+        function blue(name){
+            return new Promise( function (resolve){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'blue';
+                    resolve();
+                },1000);
+            });
+        }
+        
+        red()
+        .then(function(){
+            return orange();
+        })
+        .then(function (){
+            return yellow();
+        })
+        .then(function (){
+            return green();
+        })
+        .then(function (){
+            return blue();
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 상속</title>
+</head>
+<body>
+    <script>
+        class House{
+            constructor(str){
+                this.str = str;
+            }
+            door(){
+                console.log('문을 열고 닫습니다.');
+            }
+            window()
+            {
+                console.log('창문을 열고 닫습니다.');
+            }
+        }
+
+        class Apartment extends House
+        {
+            constructor(str, floor)
+            {   
+                //자식 클래스에서 생성자를 정의할 때 super 키워드를 사용하여 부모 클래스의 생성자를 호출
+                super(str); //constructor의 항상 상단에 존재해야 함.
+                this.floor = floor
+            }
+            elevator (){
+                console.log('승강기를 타고 내립니다.');
+            }
+
+            window(){
+                super.window();
+                console.log('창문을 닦습니다.');
+            }
+        }
+
+        const apart = new Apartment('자이 아파트');
+        apart.window();
+    </script>
+    
+</body>
+</html>

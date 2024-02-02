@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread 연산자</title>
+</head>
+<body>
+    <script>
+        const a =[1,2,3];
+        const b = [4,5];
+        const c = [...a, ...b];
+        const d = a+b; // 문자열 나옴 '1,2,34,5'
+
+        const values = [10,20,30];
+        function get(a, ...rest){
+            console.log(a);
+            console.log(rest)
+
+        }
+        console.log(get(...a));
+
+
+        const word1 = "abc";
+        const word2 = "xyz";
+        const concatword = [...word1,...word2]; 
+        console.log(concatword);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function red(name){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'red';
+                },1000);
+        }
+
+        function orange(name){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'orange';
+                },1000);
+        }
+
+        function yellow(name){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'yellow';
+                },1000);
+        }
+        
+        function green(name){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'green';
+                },1000);
+        }
+        function blue(name){
+                setTimeout(function()
+                {
+                    document.body.style.backgroundColor = 'blue';
+                },1000);
+        }
+        
+        async function exec(){
+            await red();
+            await orange();
+            await yellow();
+            await green();
+            await blue();
+        }
+        exec();
+    </script>
+</body>
+</html>

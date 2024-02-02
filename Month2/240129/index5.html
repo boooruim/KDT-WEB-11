@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비동기 처리</title>
+</head>
+<body>
+    <script>
+        console.log(1);
+        setTimeout(function(){
+            console.log(2);
+        },1000);
+        console.log(3);
+
+        //출력 결과: 1 3 2 
+        //Why? 비동기 처리
+
+
+        console.clear();
+        
+        function add(a,b){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    let result = a+b;
+                    resolve(result);
+                },1000);
+            });
+        }
+
+        function mul(n){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    let result = n*2;
+                    resolve(result);
+                },700);
+            });
+        }
+
+        function sub(n){
+            return new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    let result = n - 1;
+                    resolve(result);
+                },500);
+            });
+        }
+
+        add(4,3).then(function(result){
+            console.log('1:', result);
+            return mul(result);
+        })
+        .then(function(result){
+            console.log('2:', result);
+            return sub(result);
+        })
+        .then(function(result){
+            console.log('3:', result);
+        });
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 분해 할당</title>
+</head>
+<body>
+    <script>
+        //베열 구조 분해 할당
+        const list = ['apple', 'grape']
+
+        const [apple, grape, banana = 'banana'] = list
+        console.log(apple)
+        console.log(grape)
+        console.log(banana)
+
+
+        //객체 구조 분해
+        const obj = {
+            name : "이태근",
+            age:23,
+            gender:'M',
+            friends: ['A','B'],
+            hello: function(){
+                console.log('hello world');
+            },
+            'kdt':'kdt 11기',
+
+        };
+
+        const {name, city='서울', age} = obj;
+        const { friends, hello, age:newAge} = obj;
+        console.log(newAge);
+
+        console.log(hello);
+
+        const {kdt} = obj;
+        console.log(kdt);
+        console.log(obj['kdt']);
+
+
+
+
+    </script>
+</body>
+</html>
