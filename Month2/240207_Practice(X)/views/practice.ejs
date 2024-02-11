@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 실습</title>
+
+    <!--Axios CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <form name="register-form">
+      <fieldset>
+        <legend>아이디</legend>
+        <input type="text" placeholder="ID" name="id" required />
+      </fieldset>
+      <fieldset>
+        <legend>비밀번호</legend>
+        <input type="password" name="password" required />
+      </fieldset>
+
+      <button type="button" onclick="axiosPost()">회원가입</button>
+
+      <div class="result"></div>
+    </form>
+
+    <script>
+      function axiosPost() {
+        const form = document.forms["register-form"];
+
+        const data = {
+          id: form.id.value,
+          password: form.password.value,
+        };
+
+        const resultBox = document.querySelector(".result");
+
+        //axios
+        axios({
+          method: "POST",
+
+          url: "/axios",
+          data, //data: data,
+          //위 두 줄 대신 사용가능 url: `/axios?username=${form.name.value}&mail=${form.email.value}` , 단 POST는 불가
+        }).then((res) => {
+          console.log("res", res);
+
+          resultBox.textContent = res.data.message;
+          if (res.data.sucess) {
+            resultBox.style.color = "blue";
+          } else {
+            resultBox.style.color = "red";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
